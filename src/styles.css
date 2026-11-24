@@ -3,4 +3,88 @@
   color: #fbf2de;
   background: #101b22;
   font-family: system-ui, sans-serif;
+  --gold: #edbb6b;
+  --muted: #bdc8cb;
+  --border: #35454c;
+  --display-font: Georgia, 'Times New Roman', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  width: min(68rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.wordmark {
+  color: var(--gold);
+  font: bold 1.35rem var(--display-font);
+}
+
+.site-main {
+  flex: 1;
+  padding-block: 1.5rem 3rem;
+}
+
+.hero {
+  padding: clamp(1.5rem, 5vw, 3.25rem);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: #1b2d35;
+}
+
+.hero h1 {
+  margin: 0;
+  font: normal clamp(2.75rem, 8vw, 5.5rem)/1 var(--display-font);
+}
+
+.hero p {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.board {
+  margin-top: 2rem;
+}
+
+.board h2 {
+  margin: 0 0 1rem;
+  font: normal 1.75rem var(--display-font);
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+}
+
+.poster-placeholder {
+  min-height: 13rem;
+  border: 1px dashed #62717a;
+  border-radius: 0.5rem;
+  background: #17252d;
+}
+
+.site-footer {
+  padding-block: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.875rem;
 }
